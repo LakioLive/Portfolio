@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { FiMenu } from "react-icons/fi";
 import { IoMoon } from "react-icons/io5";
 import { FaSun } from "react-icons/fa";

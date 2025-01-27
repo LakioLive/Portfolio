@@ -17,6 +17,14 @@ export default {
                 "dark-gray": "#1a1a1a",
                 "light-gray": "#a9a9a9",
             },
+            animation: {
+                gradient: "gradient 8s linear infinite",
+            },
+            keyframes: {
+                gradient: {
+                    to: { "background-position": "200% center" },
+                },
+            },
         },
     },
     plugins: [

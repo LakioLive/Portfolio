@@ -14,15 +14,19 @@ export default {
             colors: {
                 "light-blue": "#0077FF",
                 "react-blue": "#7cdffe",
-                "dark-gray": "#1a1a1a",
+                "dark-gray": "#0B0B0B",
                 "light-gray": "#a9a9a9",
             },
             animation: {
                 gradient: "gradient 8s linear infinite",
+                border: "border 4s linear infinite",
             },
             keyframes: {
                 gradient: {
                     to: { "background-position": "200% center" },
+                },
+                border: {
+                    to: { "--border-angle": "360deg" },
                 },
             },
         },

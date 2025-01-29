@@ -35,3 +35,9 @@ body {
     background-color: #fff;
     color: #000;
 }
+
+@property --border-angle {
+    inherits: false;
+    initial-value: 0deg;
+    syntax: "<angle>";
+}

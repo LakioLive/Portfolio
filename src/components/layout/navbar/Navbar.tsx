@@ -4,14 +4,15 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
 import { motion, AnimatePresence } from "motion/react";
 import { FiMenu } from "react-icons/fi";
-import { IoMoon } from "react-icons/io5";
-import { FaSun } from "react-icons/fa";
+// import { IoMoon } from "react-icons/io5";
+// import { FaSun } from "react-icons/fa";
 
 const menuName = ["home", "about", "skills", "projects", "contact me"];
 const duration = 0.3;
 
 export default function Navbar() {
     const [handleDropdownMenu, setHandleDropdownMenu] = useState(false);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [handleDarkMode, setHandleDarkMode] = useState(true);
     const [selectedTab, setSelectedTab] = useState("home");
     const dropdownRef = useRef<HTMLDivElement>(null);
@@ -121,7 +122,6 @@ export default function Navbar() {
                             >
                                 <Link
                                     spy={true}
-                                    offset={-50}
                                     to={item.replace(/\s+/g, "")}
                                     className={`px-8 py-2 rounded-full cursor-pointer relative z-10 ${
                                         selectedTab === item
@@ -165,7 +165,7 @@ export default function Navbar() {
                     >
                         <FiMenu className="text-xl" />
                     </motion.button>
-                    <motion.button
+                    {/* <motion.button
                         initial={{ backgroundColor: initialBackgroundColor }}
                         whileHover={{ backgroundColor: hoverBackgroundColor }}
                         animate={{ backgroundColor: initialBackgroundColor }}
@@ -174,7 +174,7 @@ export default function Navbar() {
                         onClick={() => setHandleDarkMode(!handleDarkMode)}
                     >
                         <span>{!handleDarkMode ? <IoMoon /> : <FaSun />}</span>
-                    </motion.button>
+                    </motion.button> */}
                 </div>
             </div>
             <AnimatePresence>
@@ -212,7 +212,6 @@ export default function Navbar() {
                                     <Link
                                         spy={true}
                                         smooth={true}
-                                        offset={-100}
                                         duration={500}
                                         to={item.replace(/\s+/g, "")}
                                         className={`${

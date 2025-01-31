@@ -4,6 +4,7 @@ import { Tooltip } from "react-tooltip";
 import { ITechnologyIcons, ProjectCardProps } from "./ProjectCard.interfaces";
 import { IoMdLink } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
+import { Grid } from "../grid/Grid";
 
 const technologyIcons: ITechnologyIcons = {
     HTML5: "./icons/HTML5.svg",
@@ -33,6 +34,7 @@ export default function ProjectCard({
 }: ProjectCardProps) {
     return (
         <div className="relative flex flex-col items-start gap-5 max-w-7xl h-full p-6 bg-dark-gray rounded-xl [background:linear-gradient(0deg,#0B0B0B,#0B0B0B_50%,#0C0C0C)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] border border-transparent animate-border overflow-hidden">
+            <Grid />
             <div className="relative w-full">
                 <Image
                     src={imageSrc}

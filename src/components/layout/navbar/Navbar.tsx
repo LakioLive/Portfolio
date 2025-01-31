@@ -99,8 +99,8 @@ export default function Navbar() {
     }, [handleDropdownMenu]);
 
     return (
-        <nav className="fixed top-0 left-1/2 transform -translate-x-1/2 backdrop-blur-md bg-gray-300/50 dark:bg-dark-gray/50 rounded-full border border-light-gray w-max mt-4 z-50">
-            <div className="flex md:space-x-4">
+        <header className="fixed top-0 left-1/2 transform -translate-x-1/2 backdrop-blur-md bg-gray-300/50 dark:bg-dark-gray/50 rounded-full border border-light-gray w-max mt-4 z-50">
+            <nav className="flex md:space-x-4">
                 <div className="hidden md:block md:w-auto">
                     <ul className="flex">
                         {menuName.map((item, i) => (
@@ -176,7 +176,7 @@ export default function Navbar() {
                         <span>{!handleDarkMode ? <IoMoon /> : <FaSun />}</span>
                     </motion.button> */}
                 </div>
-            </div>
+            </nav>
             <AnimatePresence>
                 {handleDropdownMenu && (
                     <motion.div
@@ -237,6 +237,6 @@ export default function Navbar() {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </nav>
+        </header>
     );
 }

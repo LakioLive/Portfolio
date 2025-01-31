@@ -47,7 +47,7 @@ export default function Skills() {
     return (
         <section
             id="skills"
-            className="skills relative w-full overflow-hidden [mask-image:linear-gradient(0deg,_rgba(0,0,0,1)_80%,_rgba(255,255,255,0)_100%)]
+            className="relative w-full overflow-hidden [mask-image:linear-gradient(0deg,_rgba(0,0,0,1)_80%,_rgba(255,255,255,0)_100%)]
             "
         >
             <Spotlight />

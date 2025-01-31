@@ -7,7 +7,7 @@ export default function AboutMe() {
     return (
         <section
             id="about"
-            className="about-me relative overflow-hidden [mask-image:linear-gradient(0deg,_rgba(0,0,0,1)_70%,_rgba(255,255,255,0)_100%)]"
+            className="relative overflow-hidden [mask-image:linear-gradient(0deg,_rgba(0,0,0,1)_70%,_rgba(255,255,255,0)_100%)]"
         >
             <div className="grid place-content-center text-center h-screen">
                 <Spotlight />

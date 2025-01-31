@@ -40,21 +40,6 @@ const otherSkills = [
     { src: "./icons/NPM.svg", name: "NPM" },
     { src: "./icons/Vite.js.svg", name: "Vite.js" },
     { src: "./icons/Composer.svg", name: "Composer" },
-    { src: "./icons/Windows11.svg", name: "Windows" },
-    { src: "./icons/ArchLinux.svg", name: "I use Arch btw" },
-    { src: "./icons/VSC.svg", name: "VSCode" },
-    { src: "./icons/PyCharm.svg", name: "PyCharm" },
-    { src: "./icons/PhpStorm.svg", name: "PhpStorm" },
-    { src: "./icons/Obsidian.svg", name: "Obsidian" },
-    {
-        src: "./icons/Illustrator.svg",
-        name: "Adobe Illustrator",
-    },
-    {
-        src: "./icons/Photoshop.svg",
-        name: "Adobe Photoshop",
-    },
-    { src: "./icons/Figma.svg", name: "Figma" },
     { src: "./icons/Markdown.svg", name: "Markdown", customTheme: true },
 ];
 

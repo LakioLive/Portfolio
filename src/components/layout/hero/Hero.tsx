@@ -46,7 +46,7 @@ export default function Hero() {
                             duration={duration}
                         />
                     </div>
-                    <motion.button
+                    <motion.div
                         initial="hidden"
                         animate="visible"
                         variants={variants}
@@ -63,7 +63,7 @@ export default function Hero() {
                                 <FaArrowDown className="xl:text-xl md:text-base text-sm" />
                             </Link>
                         </HoverBorderGradient>
-                    </motion.button>
+                    </motion.div>
                 </div>
             </BackgroundBeamsWithCollision>
         </section>

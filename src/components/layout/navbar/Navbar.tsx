@@ -99,8 +99,8 @@ export default function Navbar() {
     }, [handleDropdownMenu]);
 
     return (
-        <header className="fixed top-0 left-1/2 transform -translate-x-1/2 backdrop-blur-md bg-gray-300/50 dark:bg-dark-gray/50 rounded-full border border-light-gray w-max mt-4 z-50">
-            <nav className="flex md:space-x-4">
+        <header className="fixed top-0 left-1/2 w-max mt-4 bg-gray-300/50 dark:bg-dark-gray/50 rounded-full border border-light-gray backdrop-blur-md transform -translate-x-1/2 z-50">
+            <nav className="flex">
                 <div className="hidden md:block md:w-auto">
                     <ul className="flex">
                         {menuName.map((item, i) => (
@@ -116,14 +116,13 @@ export default function Navbar() {
                                     backgroundColor: initialBackgroundColor,
                                 }}
                                 transition={{ duration }}
-                                className={`flex rounded-full cursor-pointer relative ${
-                                    item === "contact me" ? "ml-9" : ""
-                                }`}
+                                className="relative flex rounded-full cursor-pointer"
                             >
                                 <Link
                                     spy={true}
                                     to={item.replace(/\s+/g, "")}
-                                    className={`px-8 py-2 rounded-full cursor-pointer relative z-10 ${
+                                    offset={item === "contact me" ? -580 : 0}
+                                    className={`relative px-8 py-2 rounded-full cursor-pointer z-10 ${
                                         selectedTab === item
                                             ? " text-white"
                                             : ""
@@ -157,7 +156,7 @@ export default function Navbar() {
                         whileHover={{ backgroundColor: hoverBackgroundColor }}
                         animate={{ backgroundColor: initialBackgroundColor }}
                         type="button"
-                        className="flex items-center p-2 w-10 h-10 justify-center text-sm rounded-full md:hidden focus:outline-none focus:ring-2 text-light-blue dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-gray-700 focus:ring-gray-200 dark:focus:ring-gray-600"
+                        className="flex md:hidden justify-center items-center w-10 h-10 p-2 text-sm text-light-blue dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-gray-700 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-600"
                         onClick={() =>
                             setHandleDropdownMenu(!handleDropdownMenu)
                         }
@@ -185,14 +184,14 @@ export default function Navbar() {
                         exit="hidden"
                         variants={navContainer}
                         ref={dropdownRef}
-                        className="absolute top-7 mt-4 backdrop-blur-md bg-gray-300 dark:bg-dark-gray rounded border border-white"
+                        className="absolute top-7 mt-4 bg-gray-300 dark:bg-dark-gray border border-white rounded backdrop-blur-md"
                     >
                         <motion.ul
                             initial="hidden"
                             animate="visible"
                             exit="hidden"
                             variants={navList}
-                            className="grid justify-items-center sm:gap-1 text-black dark:text-white p-1"
+                            className="grid justify-items-center sm:gap-1 p-1 text-black dark:text-white"
                         >
                             {menuName.map((item, i) => (
                                 <motion.li
@@ -221,7 +220,7 @@ export default function Navbar() {
                                                 ? "px-1"
                                                 : "px-6"
                                         } sm:px-8 py-2 sm:rounded-full cursor-pointer`}
-                                        activeClass="bg-light-blue text-white"
+                                        activeClass="text-white bg-light-blue"
                                         onClick={() =>
                                             setHandleDropdownMenu(
                                                 !handleDropdownMenu,

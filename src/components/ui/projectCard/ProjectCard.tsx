@@ -45,8 +45,10 @@ export default function ProjectCard({
                 />
             </div>
             <div className="grid gap-1">
-                <h6 className="text-4xl font-semibold">{name}</h6>
-                <p className="text-xl text-gray-500 dark:text-gray-400">
+                <h6 className="xl:text-4xl md:text-2xl text-xl font-semibold">
+                    {name}
+                </h6>
+                <p className="xl:text-xl md:text-lg text-base text-gray-500 dark:text-gray-400">
                     {description}
                 </p>
             </div>

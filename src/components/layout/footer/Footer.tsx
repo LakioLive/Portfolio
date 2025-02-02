@@ -1,10 +1,10 @@
-"use client";
-
+import FooterNavigation from "@/components/ui/footerNavigation/FooterNavigation";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaBluesky, FaXTwitter } from "react-icons/fa6";
 import { MdMailOutline } from "react-icons/md";
 import { RiArrowRightUpLine } from "react-icons/ri";
-import { Link } from "react-scroll";
+
+const navigationNameData = ["Home", "About", "Skills", "Projects"];
 
 export default function Footer() {
     return (
@@ -12,7 +12,7 @@ export default function Footer() {
             <div className="container mx-auto px-3 md:px-5 py-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-12">
                     <div className="space-y-8">
-                        <h2 className="text-4xl font-bold tracking-tight">
+                        <h2 className="text-4xl text-white font-bold tracking-tight">
                             Let&apos;s create something
                             <span className="block text-light-blue">
                                 amazing together
@@ -40,19 +40,9 @@ export default function Footer() {
                             <h3 className="text-sm text-gray-300 font-semibold uppercase tracking-wider">
                                 Navigation
                             </h3>
-                            <nav className="flex flex-col space-y-4">
-                                {["Home", "About", "Skills", "Projects"].map(
-                                    (item) => (
-                                        <Link
-                                            key={item}
-                                            to={`${item.toLowerCase()}`}
-                                            className="w-fit text-gray-400 hover:text-light-blue transition cursor-pointer"
-                                        >
-                                            {item}
-                                        </Link>
-                                    ),
-                                )}
-                            </nav>
+                            <FooterNavigation
+                                navigationNameData={navigationNameData}
+                            />
                         </div>
                         <div className="space-y-6">
                             <h3 className="text-sm text-gray-300 font-semibold uppercase tracking-wider">

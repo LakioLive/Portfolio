@@ -1,16 +1,7 @@
 import Spotlight from "@/components/ui/spotlight/Spotlight";
 import SparklesCore from "@/components/ui/sparkles/Sparkles";
 import ProjectCard from "@/components/ui/projectCard/ProjectCard";
-
-interface IProject {
-    id: number;
-    name: string;
-    description: string;
-    imageSrc: string;
-    technologies: string[];
-    repository: string;
-    link: string;
-}
+import { IProject } from "./Projects.interfaces";
 
 const dataProjects = [
     {
@@ -80,28 +71,10 @@ const dataProjects = [
 ];
 
 export default function Projects() {
-    const renderItem = (arr: IProject[]) => {
-        return arr.map((project: IProject) => {
-            return (
-                <div key={project.id}>
-                    <ProjectCard
-                        id={project.id}
-                        name={project.name}
-                        description={project.description}
-                        imageSrc={project.imageSrc}
-                        technologies={project.technologies}
-                        repository={project.repository}
-                        link={project.link}
-                    />
-                </div>
-            );
-        });
-    };
-
     return (
         <section
             id="projects"
-            className="relative w-full overflow-hidden [mask-image:linear-gradient(0deg,_rgba(0,0,0,1)_80%,_rgba(255,255,255,0)_100%)]"
+            className="relative w-full text-white bg-black overflow-hidden [mask-image:linear-gradient(0deg,_rgba(0,0,0,1)_80%,_rgba(255,255,255,0)_100%)]"
         >
             <Spotlight />
             <div className="h-full container mx-auto px-5 md:px-3">
@@ -126,7 +99,21 @@ export default function Projects() {
                     </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5">
-                    {renderItem(dataProjects)}
+                    {dataProjects.map((project: IProject) => {
+                        return (
+                            <div key={project.id}>
+                                <ProjectCard
+                                    id={project.id}
+                                    name={project.name}
+                                    description={project.description}
+                                    imageSrc={project.imageSrc}
+                                    technologies={project.technologies}
+                                    repository={project.repository}
+                                    link={project.link}
+                                />
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </section>

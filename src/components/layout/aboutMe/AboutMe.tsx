@@ -1,7 +1,7 @@
 "use client";
 
-import { SparklesCore } from "@/components/ui/sparkles/Sparkles";
-import { Spotlight } from "@/components/ui/spotlight/Spotlight";
+import SparklesCore from "@/components/ui/sparkles/Sparkles";
+import Spotlight from "@/components/ui/spotlight/Spotlight";
 
 export default function AboutMe() {
     return (
@@ -25,18 +25,10 @@ export default function AboutMe() {
                             minSize={0.1}
                             maxSize={0.5}
                             particleDensity={1200}
-                            className="w-full h-full hidden dark:block"
+                            className="w-full h-full"
                             particleColor="#FFFFFF"
                         />
-                        <SparklesCore
-                            background="transparent"
-                            minSize={0.1}
-                            maxSize={0.5}
-                            particleDensity={1200}
-                            className="w-full h-full dark:hidden"
-                            particleColor="#000"
-                        />
-                        <div className="absolute inset-0 w-full h-full bg-white dark:bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+                        <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
                     </div>
                 </div>
                 <p className="xl:text-3xl md:text-xl text-lg w-svw container mx-auto px-3 md:px-5">

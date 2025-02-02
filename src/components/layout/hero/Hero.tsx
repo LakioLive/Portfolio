@@ -26,8 +26,8 @@ export default function Hero() {
 
     return (
         <section id="home" className="relative w-full h-screen rounded-lg">
-            <BackgroundBeamsWithCollision className="flex justify-center items-center w-full h-screen dark:bg-black bg-white dark:bg-grid-light-blue/[0.4] bg-grid-black/[0.2]">
-                <div className="absolute inset-0 flex justify-center items-center bg-white dark:bg-black [mask-image:linear-gradient(0deg,_rgba(0,0,0,1)_30%,_rgba(255,255,255,0)_100%)]"></div>
+            <BackgroundBeamsWithCollision className="flex justify-center items-center w-full h-screen bg-black bg-grid-light-blue/[0.4]">
+                <div className="absolute inset-0 flex justify-center items-center bg-black [mask-image:linear-gradient(0deg,_rgba(0,0,0,1)_30%,_rgba(255,255,255,0)_100%)]"></div>
                 <div className="relative grid place-items-center z-10">
                     <div className="grid place-items-center">
                         <TextGenerateEffect

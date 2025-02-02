@@ -1,8 +1,8 @@
 "use client";
 
 import SkillsContainer from "@/components/ui/skillsContainer/SkillsContainer";
-import { SparklesCore } from "@/components/ui/sparkles/Sparkles";
-import { Spotlight } from "@/components/ui/spotlight/Spotlight";
+import SparklesCore from "@/components/ui/sparkles/Sparkles";
+import Spotlight from "@/components/ui/spotlight/Spotlight";
 
 const frontendSkills = [
     { src: "./icons/HTML5.svg", name: "HTML5" },
@@ -66,18 +66,10 @@ export default function Skills() {
                             minSize={0.1}
                             maxSize={0.5}
                             particleDensity={1200}
-                            className="w-full h-full hidden dark:block"
+                            className="w-full h-full"
                             particleColor="#FFFFFF"
                         />
-                        <SparklesCore
-                            background="transparent"
-                            minSize={0.1}
-                            maxSize={0.5}
-                            particleDensity={1200}
-                            className="w-full h-full dark:hidden"
-                            particleColor="#000"
-                        />
-                        <div className="absolute inset-0 w-full h-full bg-white dark:bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+                        <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
                     </div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex gap-5">

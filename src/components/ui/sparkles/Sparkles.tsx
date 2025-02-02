@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 import { motion, useAnimation } from "motion/react";
 import { SparklesCoreProps } from "./SparklesCore.interfaces";
 
-export const SparklesCore = (props: SparklesCoreProps) => {
+export default function SparklesCore(props: SparklesCoreProps) {
     const {
         id,
         className,
@@ -425,4 +425,4 @@ export const SparklesCore = (props: SparklesCoreProps) => {
             )}
         </motion.div>
     );
-};
+}

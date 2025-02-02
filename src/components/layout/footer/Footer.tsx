@@ -27,6 +27,7 @@ export default function Footer() {
                             <a
                                 href="mailto:mister.lakio.new@gmail.com"
                                 className="group flex items-center space-x-2 text-gray-600 hover:text-light-blue transition-colors"
+                                target="_blank"
                             >
                                 <MdMailOutline className="w-5 h-5" />
                                 <span>mister.lakio.new@gmail.com</span>

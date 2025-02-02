@@ -29,7 +29,8 @@ const myFont = localFont({
 
 export const metadata: Metadata = {
     title: "Portfolio LakioLive",
-    description: "",
+    description:
+        "Welcome to LakioLive's portfolio showcasing projects, skills, and experiences.",
     icons: "/icon.ico",
 };
 

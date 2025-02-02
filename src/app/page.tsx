@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Navbar from "@/components/layout/navbar/Navbar";
 import Hero from "@/components/layout/hero/Hero";
 import AboutMe from "@/components/layout/aboutMe/AboutMe";
@@ -8,12 +9,14 @@ import Footer from "@/components/layout/footer/Footer";
 export default function Home() {
     return (
         <>
+            {/* <Suspense fallback={<>LOADING...</>}> */}
             <Navbar />
             <Hero />
             <AboutMe />
             <Skills />
             <Projects />
             <Footer />
+            {/* </Suspense> */}
         </>
     );
 }

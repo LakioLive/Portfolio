@@ -99,7 +99,7 @@ export default function Navbar() {
     }, [handleDropdownMenu]);
 
     return (
-        <header className="fixed top-0 left-1/2 w-max mt-4 bg-gray-300/50 dark:bg-dark-gray/50 rounded-full border border-light-gray backdrop-blur-md transform -translate-x-1/2 z-50">
+        <header className="fixed top-0 left-1/2 w-max mt-4 bg-dark-gray/50 rounded-full border border-light-gray backdrop-blur-md transform -translate-x-1/2 z-50">
             <nav className="flex">
                 <div className="hidden md:block md:w-auto">
                     <ul className="flex">
@@ -156,7 +156,7 @@ export default function Navbar() {
                         whileHover={{ backgroundColor: hoverBackgroundColor }}
                         animate={{ backgroundColor: initialBackgroundColor }}
                         type="button"
-                        className="flex md:hidden justify-center items-center w-10 h-10 p-2 text-sm text-light-blue dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-gray-700 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-600"
+                        className="flex md:hidden justify-center items-center w-10 h-10 p-2 text-sm text-gray-400 hover:bg-gray-700 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-600"
                         onClick={() =>
                             setHandleDropdownMenu(!handleDropdownMenu)
                         }
@@ -164,16 +164,6 @@ export default function Navbar() {
                     >
                         <FiMenu className="text-xl" />
                     </motion.button>
-                    {/* <motion.button
-                        initial={{ backgroundColor: initialBackgroundColor }}
-                        whileHover={{ backgroundColor: hoverBackgroundColor }}
-                        animate={{ backgroundColor: initialBackgroundColor }}
-                        type="button"
-                        className="flex items-center p-2 w-10 h-10 justify-center text-sm rounded-full focus:outline-none focus:ring-2 text-light-blue dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-gray-700 focus:ring-gray-200 dark:focus:ring-gray-600"
-                        onClick={() => setHandleDarkMode(!handleDarkMode)}
-                    >
-                        <span>{!handleDarkMode ? <IoMoon /> : <FaSun />}</span>
-                    </motion.button> */}
                 </div>
             </nav>
             <AnimatePresence>
@@ -184,14 +174,14 @@ export default function Navbar() {
                         exit="hidden"
                         variants={navContainer}
                         ref={dropdownRef}
-                        className="absolute top-7 mt-4 bg-gray-300 dark:bg-dark-gray border border-white rounded backdrop-blur-md"
+                        className="absolute top-7 mt-4 bg-dark-gray border border-white rounded backdrop-blur-md"
                     >
                         <motion.ul
                             initial="hidden"
                             animate="visible"
                             exit="hidden"
                             variants={navList}
-                            className="grid justify-items-center sm:gap-1 p-1 text-black dark:text-white"
+                            className="grid justify-items-center sm:gap-1 p-1 text-white"
                         >
                             {menuName.map((item, i) => (
                                 <motion.li

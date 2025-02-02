@@ -1,5 +1,3 @@
-"use client";
-
 import SkillsContainer from "@/components/ui/skillsContainer/SkillsContainer";
 import SparklesCore from "@/components/ui/sparkles/Sparkles";
 import Spotlight from "@/components/ui/spotlight/Spotlight";
@@ -47,7 +45,7 @@ export default function Skills() {
     return (
         <section
             id="skills"
-            className="relative w-full overflow-hidden [mask-image:linear-gradient(0deg,_rgba(0,0,0,1)_80%,_rgba(255,255,255,0)_100%)]
+            className="relative w-full text-white bg-black overflow-hidden [mask-image:linear-gradient(0deg,_rgba(0,0,0,1)_80%,_rgba(255,255,255,0)_100%)]
             "
         >
             <Spotlight />

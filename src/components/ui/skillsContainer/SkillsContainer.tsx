@@ -1,8 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import { Tooltip } from "react-tooltip";
 import { motion } from "motion/react";
-import { SkillsContainerProps } from "./SkillsContainer.interfaces";
 import { Grid } from "../grid/Grid";
+import { SkillsContainerProps } from "./SkillsContainer.interfaces";
 
 export default function SkillsContainer({
     title,

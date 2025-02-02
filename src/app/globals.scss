@@ -23,17 +23,10 @@
 html {
     scroll-behavior: smooth;
 
-    &.dark {
-        body {
-            background-color: #000;
-            color: #fff;
-        }
+    body {
+        background-color: #000;
+        color: #fff;
     }
-}
-
-body {
-    background-color: #fff;
-    color: #000;
 }
 
 @property --border-angle {

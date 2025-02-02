@@ -1,11 +1,7 @@
-"use client";
-
-import { Link } from "react-scroll";
-import { motion } from "motion/react";
-import { FaArrowDown } from "react-icons/fa";
+import * as motion from "motion/react-client";
 import { BackgroundBeamsWithCollision } from "@/components/ui/backgroundBeamsWithCollision/BackgroundBeamsWithCollision";
 import { TextGenerateEffect } from "@/components/ui/textGenerateEffect/TextGenerateEffect";
-import { HoverBorderGradient } from "@/components/ui/hoverBorderGradient/HoverBorderGradient";
+import ContactMeBtn from "@/components/ui/contactMeBtn/ContactMeBtn";
 
 export default function Hero() {
     const duration = 1.5;
@@ -25,7 +21,10 @@ export default function Hero() {
     };
 
     return (
-        <section id="home" className="relative w-full h-screen rounded-lg">
+        <section
+            id="home"
+            className="relative w-full text-white bg-black h-screen rounded-lg"
+        >
             <BackgroundBeamsWithCollision className="flex justify-center items-center w-full h-screen bg-black bg-grid-light-blue/[0.4]">
                 <div className="absolute inset-0 flex justify-center items-center bg-black [mask-image:linear-gradient(0deg,_rgba(0,0,0,1)_30%,_rgba(255,255,255,0)_100%)]"></div>
                 <div className="relative grid place-items-center z-10">
@@ -51,18 +50,7 @@ export default function Hero() {
                         animate="visible"
                         variants={variants}
                     >
-                        <HoverBorderGradient containerClassName="mt-4">
-                            <Link
-                                spy={true}
-                                smooth={true}
-                                duration={500}
-                                to="contactme"
-                                className="flex gap-2 items-center xl:text-2xl md:text-xl text-lg font-semibold z-20"
-                            >
-                                Contact me{" "}
-                                <FaArrowDown className="xl:text-xl md:text-base text-sm" />
-                            </Link>
-                        </HoverBorderGradient>
+                        <ContactMeBtn />
                     </motion.div>
                 </div>
             </BackgroundBeamsWithCollision>

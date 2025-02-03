@@ -52,7 +52,7 @@ export default function ProjectCard({
                     {description}
                 </p>
             </div>
-            <div className="flex justify-between items-center w-full mt-auto">
+            <div className="flex justify-between items-center gap-2 w-full mt-auto">
                 <div className="flex flex-wrap gap-3">
                     {technologies.map((tech: string, index: number) => (
                         <motion.span
